@@ -31,7 +31,7 @@ archiveArtifacts '**/*.apk'
 stage('Deploy') {
  environment {
   SIGNING_KEY_PASSWORD = credentials('keypassword')
-  SIGNING_KEYSTORE = credentials('storekey')
+  SIGNING_KEYSTORE = credentials('JKSkey')
  }
 steps {
 // Build the app in release mode, and sign the APK using the environment variables
